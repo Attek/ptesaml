@@ -1,0 +1,14 @@
+{
+    "name": "attek/ptesaml",
+    "description": "PTE saml login",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "attek",
+            "email": "pest.attila@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
