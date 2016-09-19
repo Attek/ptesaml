@@ -1,13 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: attek
- * Date: 2016/09/19
- * Time: 14:05
- */
 
 namespace attek\ptesaml;
 
+use yii\base\Object;
 
 class Saml extends Object
 {
@@ -17,9 +12,29 @@ class Saml extends Object
      */
     public $simpleSamlPath = "/usr/share/simplesamlphp/";
 
-    public static function test()
+    /**
+     * @var string
+     */
+    public $config = "default-sp";
+
+    /**
+     * @var SimpleSAML_Auth_Simple
+     */
+    private $simpleSaml;
+
+    public function init()
     {
-        echo "Test";
+        parent::init();
+        require_once($this->simpleSamlPath . 'lib/_autoload.php');
+        $this->simpleSaml =new \SimpleSAML_Auth_Simple($this->config);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSimpleSaml()
+    {
+        return $this->simpleSaml;
     }
 
 }
