@@ -6,7 +6,7 @@
  * Time: 14:05
  */
 
-namespace ptesaml;
+namespace attek\ptesaml;
 
 
 class Saml extends Object
