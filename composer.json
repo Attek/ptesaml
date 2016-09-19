@@ -1,20 +1,14 @@
 {
     "name": "attek/ptesaml",
-    "description": "PTE saml login",
+    "description": "PTE simple SAML login",
     "type": "yii2-extension",
     "license": "MIT",
     "authors": [
         {
             "name": "attek",
-            "email": "pest.attila@gmail.com",
-            "homepage": "http://pestattila.com/"
+            "email": "pest.attila@gmail.com"
         }
     ],
-    "require": {},
-    "autoload": {
-        "psr-4": {
-            "attek\\ptesaml\\": ""
-        }
-    },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "require": {}
 }
