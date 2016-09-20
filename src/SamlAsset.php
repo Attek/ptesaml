@@ -7,7 +7,7 @@ use yii\web\AssetBundle;
 
 class SamlAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/attek/ptesaml/assets';
+    public $sourcePath = '@vendor/attek/ptesaml/src/assets';
 
     public $css = [
         'saml.css',
