@@ -29,8 +29,8 @@ Set in config file (web.php)
 'components' => [
     'saml' => [
             'class' => 'attek\ptesaml\Saml',
-            'simpleSamlPath' => "/usr/share/simplesamlphp/",
-            'config' => "default-sp"
+            'simpleSamlPath' => '/usr/share/simplesamlphp/',
+            'config' => 'default-sp'
     ]
 ]
 ```
@@ -39,14 +39,20 @@ Use in code
 ```php
 $saml = Yii::$app->saml;
 //check is authenticated
-$saml->getSimpleSaml()->isAuthenticated();
+$saml->isAuthenticated();
 //Login
-$saml->getSimpleSaml()->requireAuth();
-$saml->getSimpleSaml()->getAttributes();
-$saml->getSimpleSaml()->logout();
+$saml->requireAuth();
+$saml->getAttributes();
+$saml->logout();
 $saml->getSamlUser();
 ```
 Login button
 ```
+<?php
+use attek\ptesaml\SamlAsset;
+
+/* @var yii\web\View $this */
+SamlAsset::register($this);
+?>
 <?= Html::a(Yii::t('app', 'Login'), ['saml'], ['class' => 'btn btn-primary pte-login']) ?>
 ```

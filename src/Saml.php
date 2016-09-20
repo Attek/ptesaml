@@ -55,4 +55,47 @@ class Saml extends Object
         return null;
     }
 
+    /**
+     * @return bool
+     */
+    public function isAuthenticated()
+    {
+        if ($this->simpleSaml != null) {
+            $this->simpleSaml->isAuthenticated();
+        }
+        return false;
+    }
+
+    /**
+     * @return bool
+     */
+    public function requireAuth()
+    {
+        if ($this->simpleSaml != null) {
+            $this->simpleSaml->requireAuth();
+        }
+        return false;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getAttributes()
+    {
+        if ($this->simpleSaml != null) {
+            $this->simpleSaml->getAttributes();
+        }
+        return false;
+    }
+
+    /**
+     * @return bool
+     */
+    public function logout()
+    {
+        if ($this->simpleSaml != null) {
+            $this->simpleSaml->logout();
+        }
+        return false;
+    }
 }
