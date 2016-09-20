@@ -1,5 +1,8 @@
-.pte-login::before {
+a.btn.btn-primary.pte-login {
+    margin-bottom: 20px;
+}
 
+.pte-login::before {
     content: "";
     width: 50px;
     height: 17px;
@@ -9,5 +12,4 @@
     margin-right: 5px;
     background-size: 100% auto;
     background: url(pteid.png) no-repeat center;
-
 }
