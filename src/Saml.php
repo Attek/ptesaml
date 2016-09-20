@@ -61,7 +61,7 @@ class Saml extends Object
     public function isAuthenticated()
     {
         if ($this->simpleSaml != null) {
-            $this->simpleSaml->isAuthenticated();
+            return $this->simpleSaml->isAuthenticated();
         }
         return false;
     }
@@ -72,7 +72,7 @@ class Saml extends Object
     public function requireAuth()
     {
         if ($this->simpleSaml != null) {
-            $this->simpleSaml->requireAuth();
+            return $this->simpleSaml->requireAuth();
         }
         return false;
     }
@@ -83,7 +83,7 @@ class Saml extends Object
     public function getAttributes()
     {
         if ($this->simpleSaml != null) {
-            $this->simpleSaml->getAttributes();
+            return $this->simpleSaml->getAttributes();
         }
         return false;
     }
@@ -94,7 +94,7 @@ class Saml extends Object
     public function logout()
     {
         if ($this->simpleSaml != null) {
-            $this->simpleSaml->logout();
+            return $this->simpleSaml->logout();
         }
         return false;
     }
