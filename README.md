@@ -7,7 +7,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 
 To install, either run
 ```
-    composer require attek/ptesaml "dev-master" 
+    composer require attek/ptesaml "1.*" 
 ```
 
 or add 
