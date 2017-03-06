@@ -13,7 +13,7 @@ To install, either run
 or add 
 
 ```
-"attek/ptesaml" : "dev-master"
+"attek/ptesaml" : "1.*"
 ```
 
 or clone form github
