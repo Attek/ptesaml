@@ -30,7 +30,7 @@ class Saml extends Object
             require_once($this->simpleSamlPath . 'lib/_autoload.php');
             $this->simpleSaml = new \SimpleSAML_Auth_Simple($this->config);
         } else {
-            throw new \Exception('Simple sample cant find in this path: ' . $this->simpleSamlPath);
+            throw new \Exception('SimpleSaml cant find in this path: ' . $this->simpleSamlPath);
         }
 
     }
