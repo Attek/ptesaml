@@ -110,7 +110,7 @@ class SamlUser
                     $this->displayName = $attribute;
                 }
 
-                if ($key == self::SN_ID || $key == self::SN_ID) {
+                if ($key == self::SN || $key == self::SN_ID) {
                     $this->sn = $attribute;
                 }
 
