@@ -38,6 +38,9 @@ class SamlUser
     const PREFERRED_LANGUAGE = "preferredLanguage";
     const PREFERRED_LANGUAGE_ID = "urn:oid:2.16.840.1.113730.3.1.39";
 
+    const FACULTY = "niifEduPersonFaculty";
+    const FACULTY_ID = "1.3.6.1.4.1.11914.0.1.160";
+
 
     /**
      * @var tetszőleges állandó azonosító, amely az intézményen belül egyértelműen azonosítja a felhasználót. Kézenfekvő megoldás a felhasználói azonosító (uid) használata, azonban bármilyen más azonosító használható
@@ -92,6 +95,11 @@ class SamlUser
      */
     public $schacHomeOrganizationType;
 
+	/**
+	 * @var mixed Kar neve
+	 */
+    public $niifEduPersonFaculty;
+
     public function __construct($attributes = [])
     {
 
@@ -145,6 +153,10 @@ class SamlUser
                 if ($key == self::SCHAC_HOME_ORGANIZATION_TYPE || $key == self::SCHAC_HOME_ORGANIZATION_TYPE_ID) {
                     $this->schacHomeOrganizationType = $attribute;
                 }
+
+	            if ($key == self::FACULTY || $key == self::FACULTY_ID) {
+		            $this->niifEduPersonFaculty = $attribute;
+	            }
 
             }
         }
