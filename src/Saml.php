@@ -2,7 +2,7 @@
 
 namespace attek\ptesaml;
 
-use yii\base\Object;
+use yii\base\BaseObject;
 
 class Saml extends Object
 {
