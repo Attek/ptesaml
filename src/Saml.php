@@ -4,7 +4,7 @@ namespace attek\ptesaml;
 
 use yii\base\BaseObject;
 
-class Saml extends Object
+class Saml extends BaseObject
 {
     /**
      * Path to simplesamlphp on server
