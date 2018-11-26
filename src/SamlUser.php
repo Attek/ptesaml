@@ -41,6 +41,9 @@ class SamlUser
     const FACULTY = "niifEduPersonFaculty";
     const FACULTY_ID = "1.3.6.1.4.1.11914.0.1.160";
 
+	const NEPTUN = "niifPersonOrgID";
+	const NEPTUN_ID = "1.3.6.1.4.1.11914.0.1.154";
+
 
     /**
      * @var tetszőleges állandó azonosító, amely az intézményen belül egyértelműen azonosítja a felhasználót. Kézenfekvő megoldás a felhasználói azonosító (uid) használata, azonban bármilyen más azonosító használható
@@ -100,6 +103,11 @@ class SamlUser
 	 */
     public $niifEduPersonFaculty;
 
+	/**
+	 * @var Neptun kód az AAI-ból
+	 */
+	public $niifPersonOrgID;
+
     public function __construct($attributes = [])
     {
 
@@ -156,6 +164,10 @@ class SamlUser
 
 	            if ($key == self::FACULTY || $key == self::FACULTY_ID) {
 		            $this->niifEduPersonFaculty = $attribute;
+	            }
+
+	            if ($key == self::NEPTUN || $key == self::NEPTUN_ID) {
+		            $this->niifPersonOrgID = $attribute;
 	            }
 
             }
